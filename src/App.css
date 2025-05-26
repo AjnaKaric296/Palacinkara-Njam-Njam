@@ -1,38 +1,161 @@
-.App {
+/* App.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff8f0;
+  color: #333;
+}
+
+.app {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+background-image: url('/public/images/slikica.jpg');
+height: 120%;
+width: 47%;
+margin-top: 20px;
+  background-size:cover;
+  background-position: center;
+  color: white;
+  padding: 400px;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav {
+  position: fixed;            /* fiksira navbar pri vrhu */
+  top: 0;                     /* poravnava ga s vrhom stranice */
+  left: 0;
+  width: 97%;                /* zauzima cijelu širinu */
+  background-color: rgba(0, 0, 0, 0.7); /* providna tamna pozadina */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  padding: 20px 40px;
+  z-index: 1000;              /* da bude iznad svega */
+  backdrop-filter: blur(10px); /* blur efekt iza (ako želiš) */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.nav-links {
+  align-items: center;
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+
+.hero h2 {
+  font-size: 40px;
+  margin: 20px 0 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.button {
+  background-color: #ff6961;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background-color: #ff4c4c;
+}
+
+.menu, .gallery, .contact {
+  padding: 60px 20px;
+}
+
+.menu h2, .gallery h2, .contact h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #d03f3f;
+}
+
+.menu-items {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.menu-item {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 250px;
+}
+
+.gallery-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.gallery-images img {
+  width: 250px;
+  height: auto;
+  border-radius: 15px;
+}
+
+.contact form {
+  max-width: 500px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 15px;
+}
+
+.contact input, .contact textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.contact button {
+  padding: 12px;
+  background-color: #ff6961;
   color: white;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.contact button:hover {
+  background-color: #ff4c4c;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  font-size: 14px;
 }
