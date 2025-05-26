@@ -12,14 +12,14 @@ export default function App() {
             <li><a href="#menu">O NAMA</a></li>
             <li><a href="#gallery">POSLASTICE</a></li>
             <li><a href="#contact">KONTAKT</a></li>
-            <li><a href="#contact">LOKACIJA</a></li>
+            <li><a href="#contact">LOKACIJa</a></li>
           </ul>
         </nav>
         <div className="hero">
           
 
 
-          
+
         </div>
       </header>
 
