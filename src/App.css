@@ -25,18 +25,18 @@ margin-top: 20px;
 }
 
 .nav {
-  position: fixed;            /* fiksira navbar pri vrhu */
-  top: 0;                     /* poravnava ga s vrhom stranice */
+  position: fixed;            
+  top: 0;                     
   left: 0;
-  width: 97%;                /* zauzima cijelu širinu */
-  background-color: rgba(0, 0, 0, 0.7); /* providna tamna pozadina */
+  width: 97%;                
+  background-color: rgba(0, 0, 0, 0.7); 
   color: white;
   display: flex;
   justify-content: center;
   align-items: center; 
   padding: 20px 40px;
-  z-index: 1000;              /* da bude iznad svega */
-  backdrop-filter: blur(10px); /* blur efekt iza (ako želiš) */
+  z-index: 1000;              
+  backdrop-filter: blur(10px); 
 }
 
 .logo {
