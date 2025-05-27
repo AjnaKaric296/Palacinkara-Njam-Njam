@@ -1,8 +1,10 @@
 // App.jsx
 import React, { useEffect } from "react";
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route,  useLocation } from 'react-router-dom';
 import Poslastice from './poslastice';
+import { HashLink as Link } from 'react-router-hash-link';
+
 
 function AppContent() {
   const location = useLocation();
@@ -27,9 +29,9 @@ function AppContent() {
                 <nav className="nav">
                   <ul className="nav-links">
                     <li><a href="/">HOME PAGE</a></li>
-                    <li><a href="#menu">O NAMA</a></li>
+                    <li><Link smooth to="#menu">O NAMA</Link></li>
                     <li><Link to="/poslastice">POSLASTICE</Link></li>
-                    <li><a href="/#contact">KONTAKT</a></li>
+                    <li><Link smooth to href="/#contact">KONTAKT</Link></li>
                     <li><a href="/#contact">LOKACIJA</a></li>
                   </ul>
                 </nav>
