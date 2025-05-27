@@ -1,28 +1,40 @@
 // App.jsx
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import Poslastice from './poslastice';
 
-export default function App() {
-  return (
-    <Router>
-      <div className="app">
-        <header className="header">
-          <nav className="nav">
-            <ul className="nav-links">
-              <li><a href="/">HOME PAGE</a></li>
-              <li><a href="#menu">O NAMA</a></li>
-              <li><Link to="/poslastice">POSLASTICE</Link></li>
-              <li><a href="#contact">KONTAKT</a></li>
-              <li><a href="#contact">LOKACIJA</a></li>
-            </ul>
-          </nav>
-        </header>
+function AppContent() {
+  const location = useLocation();
 
-        <Routes>
-          <Route path="/" element={
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
+
+  return (
+    <div className="app">
+      <Routes>
+        <Route
+          path="/"
+          element={
             <>
+              <header className="header">
+                <nav className="nav">
+                  <ul className="nav-links">
+                    <li><a href="/">HOME PAGE</a></li>
+                    <li><a href="#menu">O NAMA</a></li>
+                    <li><Link to="/poslastice">POSLASTICE</Link></li>
+                    <li><a href="/#contact">KONTAKT</a></li>
+                    <li><a href="/#contact">LOKACIJA</a></li>
+                  </ul>
+                </nav>
+              </header>
+
               <section id="menu" className="menu">
                 <h2>Naš meni</h2>
                 <div className="menu-items">
@@ -55,17 +67,23 @@ export default function App() {
                 </form>
               </section>
             </>
-          } />
-          <Route path="/poslastice" element={<Poslastice />} />
-        </Routes>
+          }
+        />
+        <Route path="/poslastice" element={<Poslastice />} />
+      </Routes>
 
-        <footer className="footer">
-          <p>&copy; 2025 Palancikara Njam Njam. Sva prava zadržana.</p>
-        </footer>
-      </div>
+      <footer className="footer">
+        <p>&copy; 2025 Palancikara Njam Njam. Sva prava zadržana.</p>
+      </footer>
+    </div>
+  );
+}
+
+// Glavni App s Routerom
+export default function App() {
+  return (
+    <Router>
+      <AppContent />
     </Router>
   );
-
-  
-
 }
