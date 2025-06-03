@@ -8,6 +8,7 @@ import Poslastice from "./poslastice";
 import Admin from "./Admin";
 import Layout from "./layout";
 import "./App.css";
+import Kontakt from "./kontakt"
 
 function HomePage() {
   const location = useLocation();
@@ -41,15 +42,7 @@ function HomePage() {
         <h2>Stara čaršija, Zenica 72 000</h2>
       </section>
 
-      <section id="contact" className="contact">
-        <h2>Kontaktirajte nas</h2>
-        <form>
-          <input type="text" placeholder="Vaše ime" required />
-          <input type="email" placeholder="Vaš email" required />
-          <textarea placeholder="Vaša poruka" required></textarea>
-          <button type="submit">Pošalji</button>
-        </form>
-      </section>
+      
     </>
   );
 }
@@ -71,6 +64,7 @@ export default function App() {
           <Route path="poslastice" element={<Poslastice />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
+          <Route path="kontakt" element={<Kontakt />} /> 
           <Route path="admin" element={
             <RequireAdmin>
               <Admin />
