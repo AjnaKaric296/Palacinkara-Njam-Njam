@@ -32,7 +32,7 @@ body, html {
 }
 
 .header {
-background-image: url('/public/images/slikica.jpg');
+
 height: 120%;
 width: 47%;
 margin-top: 20px;
@@ -160,6 +160,46 @@ margin-top: 20px;
 .contact button:hover {
   background-color: #ff4c4c;
 }
+.container {
+  padding: 20px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card-title {
+  padding: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
 
 .footer {
   background-color: #333;
