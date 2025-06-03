@@ -13,7 +13,8 @@ import Waffle from './waffle';
 import Torte from './torte';
 import Pica from './pica';
 
-<Route path="/palacinke" element={<Palacinke />} />
+
+import Kontakt from "./kontakt"
 
 
 function HomePage() {
@@ -42,21 +43,7 @@ function HomePage() {
         </p>
       </section>
 
-      <section id="lokacija" className="lokacija">
-        <h3>Pronađite nas na ovoj lokaciji</h3>
-        <img src="/images/Vector.png" alt="Vector" />
-        <h2>Stara čaršija, Zenica 72 000</h2>
-      </section>
-
-      <section id="contact" className="contact">
-        <h2>Kontaktirajte nas</h2>
-        <form>
-          <input type="text" placeholder="Vaše ime" required />
-          <input type="email" placeholder="Vaš email" required />
-          <textarea placeholder="Vaša poruka" required></textarea>
-          <button type="submit">Pošalji</button>
-        </form>
-      </section>
+      
     </>
   );
 }
@@ -83,6 +70,7 @@ export default function App() {
           <Route path="login" element={<Login />} />
 
           <Route path="register" element={<Register />} />
+          <Route path="kontakt" element={<Kontakt />} /> 
           <Route path="admin" element={
             <RequireAdmin>
               <Admin />
