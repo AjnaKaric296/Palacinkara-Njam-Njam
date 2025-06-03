@@ -1,6 +1,5 @@
 {
   "users": [
-     
     {
       "id": "1",
       "username": "Ajna",
@@ -8,19 +7,26 @@
       "password": "admin1",
       "role": "Admin"
     },
-     {
+    {
       "id": "2",
       "username": "Tajra",
       "email": "tajra.tasic@size.ba",
       "password": "admin2",
       "role": "Admin"
     },
- {
+    {
       "id": "3",
       "username": "Aida",
-      "email": "aida.begagicic@size.ba",
+      "email": "aida.begagic@size.ba",
       "password": "admin3",
       "role": "Admin"
+    },
+    {
+      "id": "cc5b",
+      "username": "aida",
+      "email": "aida.karic@size.ba",
+      "password": "nikonikic",
+      "role": "Guest"
     }
   ],
   "contacts": []
