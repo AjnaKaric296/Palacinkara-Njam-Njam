@@ -12,8 +12,6 @@ import Palacinke from './palacinke';
 import Waffle from './waffle';
 import Torte from './torte';
 import Pica from './pica';
-
-
 import Kontakt from "./kontakt"
 
 
