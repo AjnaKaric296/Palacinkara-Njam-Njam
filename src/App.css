@@ -3,9 +3,28 @@
 body, html {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   background-color: #fff8f0;
   color: #333;
+}
+.o-nama {
+  padding: 40px;
+  background-color: #fffaf3; /* svijetla pozadina */
+  color: #333;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.o-nama h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #cc6600;
+}
+
+.o-nama p {
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 .app {
@@ -21,6 +40,7 @@ margin-top: 20px;
   background-position: center;
   color: white;
   padding: 400px;
+  justify-content: center;
   
 }
 
@@ -65,11 +85,13 @@ margin-top: 20px;
 .hero h2 {
   font-size: 40px;
   margin: 20px 0 10px;
+  justify-content: center;
 }
 
 .hero p {
   font-size: 18px;
   margin-bottom: 20px;
+  justify-content: center;
 }
 
 .button {
@@ -144,4 +166,6 @@ margin-top: 20px;
   color: white;
   padding: 20px;
   font-size: 14px;
+  display: flex;
+  justify-content: center;
 }

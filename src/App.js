@@ -36,12 +36,6 @@ function HomePage() {
         </p>
       </section>
 
-      <section id="lokacija" className="lokacija">
-        <h3>Pronađite nas na ovoj lokaciji</h3>
-        <img src="/images/Vector.png" alt="Vector" />
-        <h2>Stara čaršija, Zenica 72 000</h2>
-      </section>
-
       
     </>
   );
