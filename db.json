@@ -1,11 +1,26 @@
 {
   "users": [
+     
     {
-      "id": "5233",
+      "id": "1",
       "username": "Ajna",
       "email": "ajna.karic@size.ba",
-      "password": "test123",
-      "role": "Guest"
+      "password": "admin1",
+      "role": "Admin"
+    },
+     {
+      "id": "2",
+      "username": "Tajra",
+      "email": "tajra.tasic@size.ba",
+      "password": "admin2",
+      "role": "Admin"
+    },
+ {
+      "id": "3",
+      "username": "Aida",
+      "email": "aida.begagicic@size.ba",
+      "password": "admin3",
+      "role": "Admin"
     }
   ],
   "contacts": []
