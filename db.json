@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "id": "5233",
+      "username": "Ajna",
+      "email": "ajna.karic@size.ba",
+      "password": "test123",
+      "role": "Guest"
+    }
+  ],
+  "contacts": []
+}

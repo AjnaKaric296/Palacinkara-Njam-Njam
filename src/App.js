@@ -1,87 +1,117 @@
-// App.jsx
+// App.js
 import React, { useEffect } from "react";
-import "./App.css";
-import { BrowserRouter as Router, Routes, Route,  useLocation } from 'react-router-dom';
-import Poslastice from './poslastice';
-import { HashLink as Link } from 'react-router-hash-link';
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate, Link } from "react-router-dom";
+import { HashLink as HashLink } from "react-router-hash-link";
 
+import Login from "./login";
+import Register from "./register";
+import Poslastice from "./poslastice";
+import Admin from "./Admin"; 
+import "./App.css";
 
 function AppContent() {
   const location = useLocation();
+  const user = JSON.parse(localStorage.getItem("loggedInUser"));
 
+  
   useEffect(() => {
     if (location.hash) {
       const element = document.querySelector(location.hash);
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        element.scrollIntoView({ behavior: "smooth" });
       }
     }
   }, [location]);
 
+  
+  const RequireAdmin = ({ children }) => {
+    if (!user || user.role !== "Admin") {
+      return <Navigate to="/" replace />;
+    }
+    return children;
+  };
+
   return (
     <div className="app">
+      <header className="header">
+        <nav className="nav">
+          <ul className="nav-links">
+            <li><Link to="/">HOME PAGE</Link></li>
+            <li><HashLink smooth to="#o-nama">O NAMA</HashLink></li>
+            <li><Link to="/poslastice">POSLASTICE</Link></li>
+            <li><HashLink smooth to="#contact">KONTAKT</HashLink></li>
+
+            {user ? (
+              <>
+                <li><span>Dobrodošao, {user.username} ({user.role})</span></li>
+                <li><a href="#" onClick={() => { localStorage.removeItem("loggedInUser"); window.location.reload(); }}>ODJAVA</a></li>
+                {user.role === "Admin" && <li><Link to="/admin">ADMIN PANEL</Link></li>}
+              </>
+            ) : (
+              <>
+                <li><Link to="/login">PRIJAVA</Link></li>
+                <li><Link to="/register">REGISTRACIJA</Link></li>
+              </>
+            )}
+            <li><HashLink to="#lokacija">LOKACIJA</HashLink></li>
+          </ul>
+        </nav>
+      </header>
+
       <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <header className="header">
-                <nav className="nav">
-                  <ul className="nav-links">
-                    <li><a href="/">HOME PAGE</a></li>
-                    <li><Link smooth to="#menu">O NAMA</Link></li>
-                    <li><Link to="/poslastice">POSLASTICE</Link></li>
-                    <li><Link smooth to href="/#contact">KONTAKT</Link></li>
-                    <li><a href="/#contact">LOKACIJA</a></li>
-                  </ul>
-                </nav>
-              </header>
+        <Route path="/" element={
+          <>
+            <section id="o-nama" className="o-nama">
+              <h2>O nama</h2>
+              <p>
+                Naš meni pažljivo je osmišljen kako bi zadovoljio različite ukuse,
+                od tradicionalnih slatkih palačinki punjenih čokoladnim kremama, plazmom,
+                orasima i voćem, do kiselkastih kombinacija za one koji više vole konkretne zalogaje.
+                Posebno se ponosimo našim specijalitetima – wafflima, koji su osvojili srca mnogih gostiju i donijeli novu dimenziju slatkog uživanja.
+                Svaka palačinka i waffle pripremaju se s pažnjom, od svježih i kvalitetnih sastojaka.
+                Kod nas ništa nije "na brzinu" – svaka narudžba je posebna i svako posluženje ima svoju priču.
+              </p>
+            </section>
 
-              <section id="menu" className="menu">
-                <h2>Naš meni</h2>
-                <div className="menu-items">
-                  <div className="menu-item">
-                    <h3>Nutella palačinka</h3>
-                    <p>Kremasta Nutella sa svježim voćem.</p>
-                  </div>
-                  <div className="menu-item">
-                    <h3>Kinder Bueno palačinka</h3>
-                    <p>Kinder čokolada i hrskavi dodatci.</p>
-                  </div>
-                </div>
-              </section>
+            <section id="lokacija" className="lokacija">
+              <h3>Pronađite nas na ovoj lokaciji</h3>
+              <img src="/images/Vector.png" alt="Vector" />
+              <h2>Stara čaršija, Zenica 72 000</h2>
+            </section>
 
-              <section id="gallery" className="gallery">
-                <h2>Galerija</h2>
-                <div className="gallery-images">
-                  <img src="/images/palacinka1.jpg" alt="Palačinka 1" />
-                  <img src="/images/palacinka2.jpg" alt="Palačinka 2" />
-                </div>
-              </section>
+            <section id="contact" className="contact">
+              <h2>Kontaktirajte nas</h2>
+              <form>
+                <input type="text" placeholder="Vaše ime" required />
+                <input type="email" placeholder="Vaš email" required />
+                <textarea placeholder="Vaša poruka" required></textarea>
+                <button type="submit">Pošalji</button>
+              </form>
+            </section>
+          </>
+        } />
 
-              <section id="contact" className="contact">
-                <h2>Kontaktirajte nas</h2>
-                <form>
-                  <input type="text" placeholder="Vaše ime" required />
-                  <input type="email" placeholder="Vaš email" required />
-                  <textarea placeholder="Vaša poruka" required></textarea>
-                  <button type="submit">Pošalji</button>
-                </form>
-              </section>
-            </>
-          }
-        />
         <Route path="/poslastice" element={<Poslastice />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+
+        <Route path="/admin" element={
+          <RequireAdmin>
+            <Admin />
+          </RequireAdmin>
+        } />
+
+        {}
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
 
       <footer className="footer">
-        <p>&copy; 2025 Palancikara Njam Njam. Sva prava zadržana.</p>
+        <p>&copy; 2025 Palačinkara Njam Njam. Sva prava zadržana.</p>
       </footer>
     </div>
   );
 }
 
-// Glavni App s Routerom
 export default function App() {
   return (
     <Router>
