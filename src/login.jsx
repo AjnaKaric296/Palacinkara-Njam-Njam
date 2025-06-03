@@ -13,32 +13,44 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const res = await fetch(`http://localhost:3001/users?email=${form.email}`);
-    const users = await res.json();
+    try {
+      const res = await fetch(`http://localhost:3001/users?email=${form.email}`);
+      const users = await res.json();
 
-    if (users.length === 0) {
-      setMessage("Korisnik ne postoji.");
-      return;
+      if (users.length === 0) {
+        setMessage("Korisnik ne postoji.");
+        return;
+      }
+
+      const user = users[0];
+
+      if (user.password !== form.password) {
+        setMessage("Pogrešna lozinka.");
+        return;
+      }
+
+      // Spremi korisnika
+      localStorage.setItem("loggedInUser", JSON.stringify(user));
+      setMessage("Prijava uspješna!");
+
+      // Preusmjeri zavisno od uloge
+      if (user.role === "Admin") {
+        navigate("/admin");
+      } else {
+        navigate("/");
+      }
+
+      // Osvježi prikaz ako ti je navbar vezan za localStorage
+      window.location.reload();
+
+    } catch (error) {
+      console.error("Greška prilikom prijave:", error);
+      setMessage("Došlo je do greške. Pokušajte ponovo.");
     }
-
-    const user = users[0];
-
-    if (user.password !== form.password) {
-      setMessage("Pogrešna lozinka.");
-      return;
-    }
-
-    // Spremi u localStorage kao trenutno prijavljenog korisnika
-    localStorage.setItem("loggedInUser", JSON.stringify(user));
-
-    setMessage("Prijava uspješna!");
-    // Preusmjeri na home ili drugu stranicu
-    navigate("/");
-    window.location.reload(); // opcionalno da osvježiš prikaz u App-u
   };
 
   return (
-    <div>
+    <div className="login-container">
       <h2>Prijava</h2>
       <form onSubmit={handleSubmit}>
         <input
@@ -59,7 +71,7 @@ export default function Login() {
         />
         <button type="submit">Prijavi se</button>
       </form>
-      <p>{message}</p>
+      {message && <p>{message}</p>}
     </div>
   );
 }
