@@ -8,10 +8,10 @@ const Poslastice = () => {
 
   const cards = [
 
-  { name: 'Palačinke', img: '/images/palacinke.jpg', path: '/palacinke', opis: 'Tanke i ukusne palačinke' },
-  { name: 'Waffle', img: '/images/waffle.jpg', path: '/waffle', opis: 'Hrskavi waffle s preljevima' },
-  { name: 'Torte', img: '/images/torte.jpg', path: '/torte', opis: 'Razne vrste torti' },
-  { name: 'Pića', img: '/images/pica.jpg', path: '/pica', opis: 'Topla i hladna pića' }
+  { name: 'Palačinke', img: '/images/palacinke.jpg', path: '/palacinke' },
+  { name: 'Waffle', img: '/images/waffle.jpg', path: '/waffle'},
+  { name: 'Torte', img: '/images/torte.jpg', path: '/torte' },
+  { name: 'Pića', img: '/images/pica.jpg', path: '/pica' }
   
 
   ];

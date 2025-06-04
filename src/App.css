@@ -196,9 +196,26 @@ margin-top: 20px;
 .card-title {
   padding: 15px;
   font-size: 1.2rem;
+  font-family: 'Times New Roman', Times, serif;
   font-weight: bold;
   color: #333;
 }
+
+.card-description {
+  font-size: 0.9rem;
+  font-family: 'Times New Roman', Times, serif;
+  color: #666;
+  padding: 0 15px 10px;
+}
+
+.card-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  color: orange;
+  padding: 0 15px 15px;
+}
+
 
 
 .footer {
