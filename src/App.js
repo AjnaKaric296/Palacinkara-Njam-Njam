@@ -8,7 +8,12 @@ import Poslastice from "./poslastice";
 import Admin from "./Admin";
 import Layout from "./layout";
 import "./App.css";
+import Palacinke from './palacinke';
+import Waffle from './waffle';
+import Torte from './torte';
+import Pica from './pica';
 import Kontakt from "./kontakt"
+
 
 function HomePage() {
   const location = useLocation();
@@ -56,7 +61,12 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
           <Route path="poslastice" element={<Poslastice />} />
+          <Route path="/palacinke" element={<Palacinke />} /> 
+          <Route path="/waffle" element={<Waffle />} /> 
+          <Route path="/torte" element={<Torte />} /> 
+          <Route path="/pica" element={<Pica />} /> 
           <Route path="login" element={<Login />} />
+
           <Route path="register" element={<Register />} />
           <Route path="kontakt" element={<Kontakt />} /> 
           <Route path="admin" element={
