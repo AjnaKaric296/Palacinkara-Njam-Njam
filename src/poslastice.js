@@ -7,10 +7,13 @@ const Poslastice = () => {
   const navigate = useNavigate();
 
   const cards = [
-    { name: 'Palačinke', img: '/images/palacinke.jpg', path: '/palacinke' },
-    { name: 'Waffle', img: '/images/waffle.jpg', path: '/waffle' },
-    { name: 'Torte', img: '/images/torte.jpg', path: '/torte' },
-    { name: 'Pića', img: '/images/pica.jpg', path: '/pica' }
+
+  { name: 'Palačinke', img: '/images/palacinke.jpg', path: '/palacinke', opis: 'Tanke i ukusne palačinke' },
+  { name: 'Waffle', img: '/images/waffle.jpg', path: '/waffle', opis: 'Hrskavi waffle s preljevima' },
+  { name: 'Torte', img: '/images/torte.jpg', path: '/torte', opis: 'Razne vrste torti' },
+  { name: 'Pića', img: '/images/pica.jpg', path: '/pica', opis: 'Topla i hladna pića' }
+  
+
   ];
 
   return (
@@ -21,13 +24,12 @@ const Poslastice = () => {
           <div
             key={index}
             className="card"
-            onClick={() => navigate(card.path)}
-
-            
+            onClick={() => navigate(card.path)} 
             
           >
             <img src={card.img} alt={card.name} className="card-image" />
             <div className="card-title">{card.name}</div>
+           <div className="card-title">{card.opis}</div> 
           </div>
         ))}
       </div>
