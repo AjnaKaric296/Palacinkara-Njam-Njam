@@ -35,7 +35,8 @@ function HomePage() {
           i donijeli novu dimenziju slatkog uživanja. Svaka palačinka i waffle pripremaju se s pažnjom.
         </p>
       </section>
-
+    
+    <img src={require("./assets/logo.png")} alt="Logo" className="fixed-logo" />
       
     </>
   );
