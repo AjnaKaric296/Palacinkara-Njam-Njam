@@ -92,14 +92,14 @@ body:not(.register-page), html:not(.register-page)  {
 
 
 body:not(.register-page) .header {
-background-image: url('/public/images/pocetna.png');
+background-image: url('/public/images/njamnjam1.png');
 background-size: contain;
 background-repeat: no-repeat;
-background-position: center;
+background-position: left;
 color: white;
 padding: 150px;
 height: 335px; 
-  width: 109%;
+  width: 78%;
   margin-top: 10px;
   margin-bottom: 0px;
 }
