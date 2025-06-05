@@ -1,24 +1,48 @@
-import React from "react";
+import React, { useState } from 'react';
+import { useProducts } from './ProductContext';
 
-export default function Admin() {
-  const user = JSON.parse(localStorage.getItem("loggedInUser"));
+const AdminPanel = () => {
+  const { products, addProduct, removeProduct } = useProducts();
+  const [newProduct, setNewProduct] = useState({
+    name: '',
+    img: '',
+    opis: '',
+    cijena: ''
+  });
+
+  const handleChange = (e) => {
+    setNewProduct({ ...newProduct, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!newProduct.name || !newProduct.cijena) return;
+    addProduct({ ...newProduct, cijena: parseFloat(newProduct.cijena) });
+    setNewProduct({ name: '', img: '', opis: '', cijena: '' });
+  };
 
   return (
-    <div style={{ padding: "30px" }}>
-      <h1>Dobrodošli na Admin Panel</h1>
-      <p>Prijavljeni ste kao: <strong>{user?.username}</strong></p>
-      <p>Email: <strong>{user?.email}</strong></p>
-      <p>Uloga: <strong>{user?.role}</strong></p>
+    <div className="container">
+      <h2>Admin Panel - Upravljanje Proizvodima</h2>
 
-      <hr />
+      <form onSubmit={handleSubmit} className="mb-4">
+        <input name="name" value={newProduct.name} onChange={handleChange} placeholder="Naziv" required />
+        <input name="img" value={newProduct.img} onChange={handleChange} placeholder="URL slike" />
+        <input name="opis" value={newProduct.opis} onChange={handleChange} placeholder="Opis" />
+        <input name="cijena" value={newProduct.cijena} onChange={handleChange} placeholder="Cijena" required />
+        <button type="submit">Dodaj Proizvod</button>
+      </form>
 
-      {/* Ovdje možete dodati više admin funkcija */}
-      <h2>Upravljanje sadržajem</h2>
       <ul>
-        <li>Pregled i uređivanje korisnika</li>
-        <li>Dodavanje ili uklanjanje proizvoda</li>
-        <li>Pregled poruka i komentara</li>
+        {products.map((p) => (
+          <li key={p.id}>
+            {p.name} - {p.cijena} KM
+            <button onClick={() => removeProduct(p.id)} className="ml-2 text-red-500">Ukloni</button>
+          </li>
+        ))}
       </ul>
     </div>
   );
-}
+};
+
+export default AdminPanel;
