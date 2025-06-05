@@ -1,6 +1,6 @@
 /* App.css */
 
-body, html {
+body:not(.register-page), html:not(.register-page)  {
   margin: 0;
   padding: 0;
   font-family: 'Times New Roman', Times, serif;
@@ -31,7 +31,7 @@ body, html {
   text-align: center;
 }
 
-.header {
+body:not(.register-page) .header  {
 
 height: 120%;
 width: 47%;
@@ -215,6 +215,8 @@ margin-top: 20px;
   color: orange;
   padding: 0 15px 15px;
 }
+
+
 
 
 

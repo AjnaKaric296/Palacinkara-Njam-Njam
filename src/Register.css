@@ -1,0 +1,76 @@
+.register-container {
+  display: flex;
+  height: 100vh;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+.register-left {
+  flex: 2;
+  padding:60px 40px;
+  background: url('/public/images/maskota.png') no-repeat center center;
+  background-size:60%;
+   
+}
+
+
+.register-right {
+  flex: 1;
+  background-color: white;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px 0 0 10px;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  
+}
+
+.register-right h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.register-right form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-right input {
+  margin-bottom: 15px;
+  margin:10px;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.register-right input:focus {
+  border-color: #555;
+}
+
+.register-right button {
+  padding: 12px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin:50px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.register-right button:hover {
+  background-color: #333;
+}
+
+.register-right p {
+  margin-top: 15px;
+  color: #d00;
+  text-align: center;
+}
