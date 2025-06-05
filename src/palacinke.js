@@ -1,6 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { useCart } from './CartContext';
 
 const Palacinke = () => {
+  const { addToCart } = useCart();
+
   const cards = [
     {
       name: 'Bounty',
@@ -92,7 +96,6 @@ const Palacinke = () => {
       opis: 'Klasik palačinak, jabuka i vanila nadjev, preliv karamel i bijeli krem, orasi, sladoled',
       cijena: '7 KM'
     },
-
   ];
 
   return (
@@ -105,9 +108,25 @@ const Palacinke = () => {
             <div className="card-title">{card.name}</div>
             <div className="card-description">{card.opis}</div>
             <div className="card-price">{card.cijena}</div>
+            <button
+              className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-1 px-3 mt-2 rounded"
+              onClick={() =>
+                addToCart({
+                  id: index + 100,
+                  naziv: card.name,
+                  cijena: parseFloat(card.cijena), // '6 KM' → 6
+                })
+              }
+            >
+              Dodaj u korpu
+            </button>
           </div>
         ))}
       </div>
+
+      <Link to="/Guest">
+        <button className="naruci-btn-fix">Pogledaj korpu</button>
+      </Link>
     </div>
   );
 };

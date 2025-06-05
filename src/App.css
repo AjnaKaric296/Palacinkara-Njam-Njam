@@ -1,6 +1,6 @@
 /* App.css */
 
-body:not(.register-page), html:not(.register-page)  {
+body:not(.register-page,), html:not(.register-page)  {
   margin: 0;
   padding: 0;
   font-family: 'Times New Roman', Times, serif;
@@ -90,7 +90,6 @@ body:not(.register-page), html:not(.register-page)  {
   text-align: center;
 }
 
-<<<<<<< HEAD
 body:not(.register-page) .header  {
 
 height: 120%;
@@ -101,8 +100,10 @@ margin-top: 20px;
   color: white;
   padding: 400px;
   justify-content: center;
-=======
-.header {
+}
+
+body:not(.register-page) .header {
+
 background-image: url('/public/images/pocetna.png');
 background-size: contain;
 background-repeat: no-repeat;
@@ -113,8 +114,7 @@ height: 335px;
   width: 109%;
   margin-top: 10px;
   margin-bottom: 0px;
->>>>>>> 4776511adbbe6116b4367a485b4830cb0578f99e
-  
+
 }
 
 
@@ -295,15 +295,35 @@ height: 335px;
 
 
 
+.naruci-btn-fix {
+  position: fixed;  /* fiksira dugme u viewportu */
+  bottom: 20px;     /* 20px od dna ekrana */
+  right: 20px;      /* 20px od desnog ruba */
+  padding: 12px 24px;
+  font-size: 18px;
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 1000;   /* da je iznad ostalih elemenata */
+}
+
+.naruci-btn:hover {
+  background-color: #e758a3;
+}
+
+
 .footer {
+  position: fixedcc;    
+  width: 97%;                
   background-color: rgba(0, 0, 0, 0.7); 
   color: white;
-  padding: 20px;
-  font-size: 14px;
   display: flex;
   justify-content: center;
-  z-index: 1000;
-color: white;
-backdrop-filter: blur(10px);
+  align-items: center; 
+  padding: 20px 40px;
+  z-index: 1000;              
+  backdrop-filter: blur(10px); 
 }
 

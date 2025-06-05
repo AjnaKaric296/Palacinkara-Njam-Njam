@@ -1,7 +1,6 @@
 // App.js
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from "react-router-dom";
-
 import Login from "./login";
 import Register from "./register";
 import Poslastice from "./poslastice";
@@ -12,7 +11,10 @@ import Palacinke from './palacinke';
 import Waffle from './waffle';
 import Torte from './torte';
 import Pica from './pica';
-import Kontakt from "./kontakt"
+import Kontakt from "./kontakt";
+import Guest from "./Guest";
+import { CartProvider } from "./CartContext"; 
+
 
 
 function HomePage() {
@@ -94,6 +96,7 @@ function RequireAdmin({ children }) {
 
 export default function App() {
   return (
+    <CartProvider>
     <Router>
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -104,6 +107,7 @@ export default function App() {
           <Route path="/torte" element={<Torte />} /> 
           <Route path="/pica" element={<Pica />} /> 
           <Route path="login" element={<Login />} />
+          <Route path="guest" element={<Guest />} />
 
           <Route path="register" element={<Register />} />
           <Route path="kontakt" element={<Kontakt />} /> 
@@ -115,6 +119,6 @@ export default function App() {
         </Route>
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-    </Router>
+    </Router></CartProvider>
   );
 }
