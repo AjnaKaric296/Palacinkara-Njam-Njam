@@ -16,7 +16,7 @@ const Layout = () => {
             <li><HashLink smooth to="/#o-nama">O NAMA</HashLink></li>
             <li><Link to="/poslastice">POSLASTICE</Link></li>
             <li><Link to="/kontakt">KONTAKT</Link></li>
-            <li><HashLink smooth to="/#lokacija">LOKACIJA</HashLink></li>
+            <li><Link to="/kontakt">LOKACIJA</Link></li>
 
           {user ? (
   <>
