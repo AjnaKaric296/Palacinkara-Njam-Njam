@@ -17,33 +17,33 @@ const Layout = () => {
             <li><Link to="/poslastice">POSLASTICE</Link></li>
             <li><Link to="/kontakt">KONTAKT</Link></li>
             <li><Link to="/kontakt">LOKACIJA</Link></li>
- {user.role === "Guest" && (
-      <li><Link to="/guest">KORPA</Link></li>
-    )}
-    {user.role === "Admin" && (
-      <li><Link to="/admin">ADMIN PANEL</Link></li>
-    )}
 
-          {user ? (
-  <>
-    <li><span>Dobrodošli, {user.username} ({user.role})</span></li>
+            {/* Provjera da li user postoji prije provjere role */}
+            {user?.role === "Guest" && (
+              <li><Link to="/guest">KORPA</Link></li>
+            )}
+            {user?.role === "Admin" && (
+              <li><Link to="/admin">ADMIN PANEL</Link></li>
+            )}
 
-    <li>
-      <a href="#" onClick={() => {
-        localStorage.removeItem("loggedInUser");
-        window.location.reload();
-      }}>
-        ODJAVA
-      </a>
-    </li>
-  </>
-) : (
-  <>
-    <li><Link to="/login">PRIJAVA</Link></li>
-    <li><Link to="/register">REGISTRACIJA</Link></li>
-  </>
-)}
-
+            {user ? (
+              <>
+                <li><span>Dobrodošli, {user.username} ({user.role})</span></li>
+                <li>
+                  <a href="#" onClick={() => {
+                    localStorage.removeItem("loggedInUser");
+                    window.location.reload();
+                  }}>
+                    ODJAVA
+                  </a>
+                </li>
+              </>
+            ) : (
+              <>
+                <li><Link to="/login">PRIJAVA</Link></li>
+                <li><Link to="/register">REGISTRACIJA</Link></li>
+              </>
+            )}
           </ul>
         </nav>
       </header>
@@ -59,4 +59,6 @@ const Layout = () => {
   );
 };
 
+
 export default Layout;
+
