@@ -192,34 +192,56 @@ height: 335px;
   border-radius: 15px;
 }
 
+.contact {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.contact h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #222;
+}
+
 .contact form {
-  max-width: 500px;
+  max-width: 400px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
-.contact input, .contact textarea {
+.contact input,
+.contact textarea {
   padding: 12px;
-  border-radius: 10px;
+  border-radius: 8px;
   border: 1px solid #ccc;
   font-size: 16px;
+  outline: none;
+}
+
+.contact textarea {
+  resize: vertical;
+  min-height: 100px;
 }
 
 .contact button {
   padding: 12px;
-  background-color: #ff6961;
-  color: white;
+  background-color: #000;
+  color: #fff;
   border: none;
-  border-radius: 20px;
-  font-weight: bold;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .contact button:hover {
-  background-color: #ff4c4c;
+  background-color: #333;
 }
+
 .container {
   padding: 20px;
   font-family: sans-serif;
