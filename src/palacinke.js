@@ -1,21 +1,27 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { useCart } from './CartContext';
+import { Link } from 'react-router-dom';      // Za Link
+import { useCart } from './CartContext';      // Za useCart
+import { useProducts } from './ProductContext';  // Za u
 
 const Palacinke = () => {
   const { addToCart } = useCart();
+  const { products } = useProducts();
+
   const user = JSON.parse(localStorage.getItem('loggedInUser'));
+
+  // Filtriraj proizvode koji su samo palačinke
+  const palacinke = products.filter(product => product.category === 'palacinke');
 
   return (
     <div className="container">
       <h1>Palačinke</h1>
       <div className="cards">
-        {cards.map((card) => (
+        {palacinke.map((card) => (
           <div key={card.id} className="card">
             <img src={card.img} alt={card.name} className="card-image" />
             <div className="card-title">{card.name}</div>
             <div className="card-description">{card.opis}</div>
-            <div className="card-price">{card.cijena}</div>
+            <div className="card-price">{card.cijena} KM</div>
 
             {user?.role === 'Guest' && (
               <button
@@ -24,7 +30,7 @@ const Palacinke = () => {
                   addToCart({
                     id: card.id,
                     naziv: card.name,
-                    cijena: parseFloat(card.cijena), // pretvori '6 KM' u 6
+                    cijena: parseFloat(card.cijena),
                   })
                 }
               >
@@ -43,5 +49,4 @@ const Palacinke = () => {
     </div>
   );
 };
-
 export default Palacinke;
