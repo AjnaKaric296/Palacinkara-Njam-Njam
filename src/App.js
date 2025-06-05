@@ -12,7 +12,8 @@ import Palacinke from './palacinke';
 import Waffle from './waffle';
 import Torte from './torte';
 import Pica from './pica';
-import Kontakt from "./kontakt"
+import Kontakt from "./kontakt";
+import Guest from "./Guest";
 
 
 function HomePage() {
@@ -104,6 +105,7 @@ export default function App() {
           <Route path="/torte" element={<Torte />} /> 
           <Route path="/pica" element={<Pica />} /> 
           <Route path="login" element={<Login />} />
+          <Route path="guest" element={<Guest />} />
 
           <Route path="register" element={<Register />} />
           <Route path="kontakt" element={<Kontakt />} /> 
