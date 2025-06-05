@@ -24,19 +24,56 @@ function HomePage() {
 
   return (
     <>
-      <section id="top"></section>
-      <section id="o-nama" className="o-nama">
-        <h2>O nama</h2>
-        <p>
-          Naš meni pažljivo je osmišljen kako bi zadovoljio različite ukuse,
-          od tradicionalnih slatkih palačinki punjenih čokoladnim kremama, plazmom,
-          orasima i voćem, do kiselkastih kombinacija za one koji više vole konkretne zalogaje.
-          Posebno se ponosimo našim specijalitetima – wafflima, koji su osvojili srca mnogih gostiju
-          i donijeli novu dimenziju slatkog uživanja. Svaka palačinka i waffle pripremaju se s pažnjom.
-        </p>
-      </section>
-    
-    <img src={require("./assets/logo.png")} alt="Logo" className="fixed-logo" />
+      <section id="o-nama" className="o-nama-wrap">
+  <div className="o-nama">
+    <h1>Dobrodošli u palačinkarnicu <span>Njam Njam</span>!</h1>
+    <p>
+      Uživajte u najukusnijim palačinkama i wafflima u gradu – pripremljeni s ljubavlju, svaki dan!
+      Naš meni pažljivo je osmišljen kako bi zadovoljio različite ukuse, od tradicionalnih slatkih palačinki
+      punjenih čokoladnim kremama, plazmom, orasima i voćem, do kiselkastih kombinacija za one koji više vole konkretne zalogaje.
+      Posebno se ponosimo našim specijalitetima – wafflima, koji su osvojili srca mnogih gostiju
+      i donijeli novu dimenziju slatkog uživanja.
+<br />
+      Naša priča počela je iz jednostavne, ali snažne ideje da ljubav prema palačinkama pretvorimo u jedinstveno mjesto gdje će se svi osjećati kao kod kuće.
+      Od skromnih početaka, danas smo postali omiljeno mjesto za slatke zalogaje, gdje svaki recept nosi pečat domaće kreativnosti.
+
+      
+
+      Svaki desert priprema se svježe, s posebnom pažnjom, jer vjerujemo da se ljubav prema hrani prepoznaje u svakom zalogaju.
+
+      Pored svakodnevnog uživanja, organizujemo i proslave rođendana, dječijih zabava i drugih posebnih trenutaka uz dekoraciju, slatki sto i osmijehe naših maskota.
+
+      Uživajte u atmosferi gdje se slatki snovi pretvaraju u stvarnost, jer kod nas svaki dan može biti slavlje.
+
+      Dobrodošli u Njam Njam – mjesto gdje palačinke pričaju svoju priču.<br />
+      Iza Njam Njam palačinkarnice stoji Sefir, mladi entuzijasta iz Zenice s velikom ljubavlju prema kulinarstvu i slatkim delicijama. Njegov san nije bio samo otvoriti lokal – već stvoriti toplu priču, mjesto susreta, okusa i osmijeha.
+Inspiraciju je pronašao u putovanjima, raznim svjetskim kuhinjama, ali i u domaćim, porodičnim receptima koji nose posebnu emociju.
+Njam Njam je mnogo više od deserta. To je emocija, uspomena i miris koji podsjeća na djetinjstvo. Hvala vam što ste dio naše priče i što svaki dan dijelite s nama.
+    </p>
+  </div>
+
+  <img src="/images/maskota.png" alt="Maskota" className="fixed-logo" />
+</section>
+<section id="dogadjaji" className="dogadjaji-wrap">
+  <div className="dogadjaji">
+
+    <div className="dogadjaj">
+      <h3>Nagradne igre </h3>
+      <img src="/images/nagradna.jpg" alt="Otvaranje palačinkarnice" />
+      <img src="/images/nagradnaaaaaa.jpg" alt="Otvaranje palačinkarnice" />
+      <img src="/images/ponuda.jpg" alt="Otvaranje palačinkarnice" />
+    </div>
+
+    <div className="dogadjaj">
+      <h3>Besplatna dostava/korpa</h3>
+      <img src="/images/korpa1.jpg" alt="Dječija zabava" />
+      <img src="/images/dostava.jpg" alt="Dječija zabava" />
+      <img src="/images/korpa2.jpg" alt="Dječija zabava" />
+    </div>
+
+  </div>
+</section>
+
       
     </>
   );
