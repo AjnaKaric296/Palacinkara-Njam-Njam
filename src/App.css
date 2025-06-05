@@ -1,6 +1,6 @@
 /* App.css */
 
-body:not(.register-page), html:not(.register-page)  {
+body:not(.register-page,), html:not(.register-page)  {
   margin: 0;
   padding: 0;
   font-family: 'Times New Roman', Times, serif;
@@ -280,6 +280,25 @@ height: 335px;
 
 
 
+
+
+.naruci-btn-fix {
+  position: fixed;  /* fiksira dugme u viewportu */
+  bottom: 20px;     /* 20px od dna ekrana */
+  right: 20px;      /* 20px od desnog ruba */
+  padding: 12px 24px;
+  font-size: 18px;
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 1000;   /* da je iznad ostalih elemenata */
+}
+
+.naruci-btn:hover {
+  background-color: #e758a3;
+}
 
 
 .footer {
