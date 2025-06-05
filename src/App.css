@@ -4,22 +4,34 @@ body:not(.register-page), html:not(.register-page)  {
   margin: 0;
   padding: 0;
   font-family: 'Times New Roman', Times, serif;
-  background-color: #fff8f0;
+  background-color: white;
   color: #333;
-}
-.o-nama {
-  padding: 40px;
-  background-color: #fffaf3; /* svijetla pozadina */
-  color: #333;
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
 }
 
-.o-nama h2 {
-  font-size: 32px;
+.o-nama-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 10px;
+  background-color: white;
+  margin-left: 100px;
   margin-bottom: 20px;
-  color: #cc6600;
+}
+
+.o-nama {
+  flex: 1;
+  color: #333;
+  text-align: left;
+}
+
+.o-nama h1 {
+  font-size: 32px;
+  margin-bottom: 0px;
+  color: #F4C542;
+  gap: 20px;
 }
 
 .o-nama p {
@@ -27,10 +39,58 @@ body:not(.register-page), html:not(.register-page)  {
   line-height: 1.6;
 }
 
+.fixed-logo {
+  position: sticky;
+  top: 100px; /* fiksira se dok se tekst skroluje */
+  bottom: 100px;
+  width: 350px;
+  height: auto;
+  margin-right: 0px;
+  
+}
+.dogadjaji-wrap {
+  padding: 20px 20px;
+  background-color: white;
+  text-align: center;
+}
+
+.dogadjaji h2 {
+  font-size: 32px;
+  color: #F4C542;
+  margin-bottom: 40px;
+}
+
+.dogadjaj {
+  margin-bottom: 40px;
+}
+
+.dogadjaj h3 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color:#F4C542;
+}
+
+.dogadjaj img {
+  width: 30%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-left: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.dogadjaj img:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+
 .app {
   text-align: center;
 }
 
+<<<<<<< HEAD
 body:not(.register-page) .header  {
 
 height: 120%;
@@ -41,8 +101,22 @@ margin-top: 20px;
   color: white;
   padding: 400px;
   justify-content: center;
+=======
+.header {
+background-image: url('/public/images/pocetna.png');
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+color: white;
+padding: 150px;
+height: 335px; 
+  width: 109%;
+  margin-top: 10px;
+  margin-bottom: 0px;
+>>>>>>> 4776511adbbe6116b4367a485b4830cb0578f99e
   
 }
+
 
 .nav {
   position: fixed;            
@@ -84,14 +158,13 @@ margin-top: 20px;
 
 .hero h2 {
   font-size: 40px;
-  margin: 20px 0 10px;
+  margin: 20px 0 0px;
   justify-content: center;
 }
 
 .hero p {
   font-size: 18px;
   margin-bottom: 20px;
-  justify-content: center;
 }
 
 .button {
@@ -220,11 +293,17 @@ margin-top: 20px;
 
 
 
+
+
 .footer {
-  background-color: #333;
+  background-color: rgba(0, 0, 0, 0.7); 
   color: white;
   padding: 20px;
   font-size: 14px;
   display: flex;
   justify-content: center;
+  z-index: 1000;
+color: white;
+backdrop-filter: blur(10px);
 }
+
