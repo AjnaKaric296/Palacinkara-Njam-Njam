@@ -17,18 +17,16 @@ const Layout = () => {
             <li><Link to="/poslastice">POSLASTICE</Link></li>
             <li><Link to="/kontakt">KONTAKT</Link></li>
             <li><Link to="/kontakt">LOKACIJA</Link></li>
-
-          {user ? (
-  <>
-    <li><span>Dobrodošao, {user.username} ({user.role})</span></li>
-    
-    {user.role === "Guest" && (
+ {user.role === "Guest" && (
       <li><Link to="/guest">KORPA</Link></li>
     )}
-
     {user.role === "Admin" && (
       <li><Link to="/admin">ADMIN PANEL</Link></li>
     )}
+
+          {user ? (
+  <>
+    <li><span>Dobrodošli, {user.username} ({user.role})</span></li>
 
     <li>
       <a href="#" onClick={() => {
