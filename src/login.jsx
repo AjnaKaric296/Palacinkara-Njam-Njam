@@ -1,10 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import "./Register.css"; // koristi isti CSS kao i register
 
 export default function Login() {
   const [form, setForm] = useState({ email: "", password: "" });
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
+
+  // Dodavanje klase za izolaciju stilova
+  useEffect(() => {
+    document.body.classList.add("register-page");
+    return () => {
+      document.body.classList.remove("register-page");
+    };
+  }, []);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -29,20 +38,16 @@ export default function Login() {
         return;
       }
 
-      // Spremi korisnika
       localStorage.setItem("loggedInUser", JSON.stringify(user));
       setMessage("Prijava uspješna!");
 
-      // Preusmjeri zavisno od uloge
       if (user.role === "Admin") {
         navigate("/admin");
       } else {
         navigate("/");
       }
 
-      // Osvježi prikaz ako ti je navbar vezan za localStorage
       window.location.reload();
-
     } catch (error) {
       console.error("Greška prilikom prijave:", error);
       setMessage("Došlo je do greške. Pokušajte ponovo.");
@@ -50,28 +55,31 @@ export default function Login() {
   };
 
   return (
-    <div className="login-container">
-      <h2>Prijava</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="email"
-          name="email"
-          value={form.email}
-          onChange={handleChange}
-          placeholder="Vaš email"
-          required
-        />
-        <input
-          type="password"
-          name="password"
-          value={form.password}
-          onChange={handleChange}
-          placeholder="Lozinka"
-          required
-        />
-        <button type="submit">Prijavi se</button>
-      </form>
-      {message && <p>{message}</p>}
+    <div className="register-container">
+      <div className="register-left"></div>
+      <div className="register-right">
+        <h2>Prijava</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            name="email"
+            value={form.email}
+            onChange={handleChange}
+            placeholder="Vaš email"
+            required
+          />
+          <input
+            type="password"
+            name="password"
+            value={form.password}
+            onChange={handleChange}
+            placeholder="Lozinka"
+            required
+          />
+          <button type="submit">Prijavi se</button>
+        </form>
+        {message && <p>{message}</p>}
+      </div>
     </div>
   );
 }
