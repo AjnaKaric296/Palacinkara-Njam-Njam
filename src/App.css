@@ -1,9 +1,20 @@
-/* App.css */
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+
+* {
+  font-family: 'Lexend', sans-serif;
+}
+
+body {
+  padding-top: 50px ;
+}
+
+
 .header-home {
   background-image: url('/public/images/njamnjam1.png');
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: left;
+  background-position: left top; /* fiksirana pozicija slike za vrh i lijevo */
+  background-attachment: fixed; /* slika ostaje fiksirana prilikom skrolovanja */
   color: white;
   padding: 150px;
   height: 400px; 
@@ -11,6 +22,7 @@
   margin-top: 10px;
   margin-bottom: 0px;
 }
+
 
 .o-nama-wrap {
   display: flex;
@@ -106,6 +118,17 @@
   z-index: 1000;              
   backdrop-filter: blur(10px); 
 }
+
+/* SVE sekcije dobijaju padding-top */
+section {
+  padding-top: 80px;
+}
+
+/* ALI Home ostaje bez tog pomaka */
+#home {
+  padding-top: 0;
+}
+
 
 .logo {
   font-size: 28px;
@@ -272,14 +295,14 @@
 .card-title {
   padding: 15px;
   font-size: 1.2rem;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Lexend', sans-serif;
   font-weight: bold;
   color: #F4C542;
 }
 
 .card-description {
   font-size: 0.9rem;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Lexend', sans-serif;
   color: #666;
   padding: 0 15px 10px;
 }
@@ -545,6 +568,209 @@
   background-color: #dc262690;
 }
 
+.lokacija-box {
+  ffont-family: 'Lexend', sans-serif;
+  background-color: #fff;
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
 
+.lokacija-box h2,
+.lokacija-box h3 {
+  margin-bottom: 15px;
+  color: #333;
+}
 
+.vector-img {
+  display: block;
+  margin: 0 auto 20px;
+  max-width: 150px;
+  height: auto;
+}
 
+.lokacija-box .mapa {
+  margin-top: 20px;
+}
+
+.lokacija-box iframe {
+  border: none;
+  border-radius: 12px;
+  width: 100%;
+  height: 300px;
+}
+
+.kontakt-lokacija-wrap {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+.kontakt-card,
+.lokacija-card {
+  flex: 1 1 400px;
+  background-color: #ffff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  font-family: 'Lexend', sans-serif;
+  text-align: center;
+  max-width: 600px;
+}
+
+.kontakt-card h2,
+.lokacija-card h2,
+.lokacija-card h3 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.kontakt-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.kontakt-card input,
+.kontakt-card textarea {
+  padding: 10px;
+  font-family: 'Lexend', sans-serif;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.kontakt-card button {
+  background-color: #333;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.kontakt-card button:hover {
+  background-color: #555;
+}
+
+.lokacija-card img {
+  max-width: 80px;
+  margin-bottom: 20px;
+}
+
+.lokacija-card iframe {
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+/* ===== Responzivni dodatak ===== */
+
+/* Osnovno: postavi padding-top na body da sadržaj ne ide ispod fiksirane navigacije */
+body {
+  padding-top: 50px; /* prilagodi visini tvoje navigacije */
+}
+
+@media (max-width: 1024px) {
+  body {
+    padding-top: 240px;
+  }
+
+  .o-nama-wrap {
+    margin-left: 50px;
+    gap: 40px;
+  }
+
+  .dogadjaj img {
+    width: 50%;
+    margin-left: 10px;
+  }
+
+  .fixed-logo {
+    width: 250px;
+    top: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 260px;
+  }
+
+  .o-nama-wrap {
+    flex-direction: column;
+    margin-left: 0;
+    gap: 30px;
+    padding: 10px;
+  }
+
+  .dogadjaj img {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .fixed-logo {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 20px auto;
+    top: auto;
+  }
+
+  .nav {
+    flex-direction: column;
+    padding: 15px 20px;
+    width: 100%;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .header-home {
+    padding: 80px 20px;
+    background-position: center top;
+    background-attachment: scroll;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-top: 300px;
+  }
+
+  .o-nama h1 {
+    font-size: 24px;
+  }
+
+  .o-nama p,
+  .hero p,
+  .hero h2 {
+    font-size: 16px;
+  }
+
+  .dogadjaj h3 {
+    font-size: 24px;
+  }
+
+  .nav-links a {
+    padding: 10px 0;
+    font-size: 16px;
+  }
+
+  .button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}

@@ -27,6 +27,13 @@
       "email": "aida.karic@size.ba",
       "password": "nikonikic",
       "role": "Guest"
+    },
+    {
+      "id": "187e",
+      "username": "tajra_t19",
+      "email": "tajra.tasic2005@gmail.com",
+      "password": "kukulele123",
+      "role": "Guest"
     }
   ],
   "contacts": []
