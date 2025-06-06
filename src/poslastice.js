@@ -3,6 +3,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 
+
 const Poslastice = () => {
   const navigate = useNavigate();
 
@@ -17,6 +18,7 @@ const Poslastice = () => {
   ];
 
   return (
+    <div className="pozadina">
     <div className="container">
       <h1>Odaberi meni</h1>
       <div className="cards">
@@ -33,6 +35,7 @@ const Poslastice = () => {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 };

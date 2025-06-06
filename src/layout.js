@@ -1,15 +1,18 @@
-// Layout.js
 import React from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import "./App.css";
 
 const Layout = () => {
   const user = JSON.parse(localStorage.getItem("loggedInUser"));
+  const location = useLocation();
+
+  // Provjeri da li smo na home page-u (ruta: "/")
+  const isHomePage = location.pathname === "/";
 
   return (
     <>
-      <header className="header">
+      <header className={`header ${isHomePage ? "header-home" : ""}`}>
         <nav className="nav">
           <ul className="nav-links">
             <li><HashLink smooth to="/#">HOME PAGE</HashLink></li>
@@ -17,8 +20,7 @@ const Layout = () => {
             <li><Link to="/poslastice">POSLASTICE</Link></li>
             <li><Link to="/kontakt">KONTAKT</Link></li>
             <li><Link to="/kontakt">LOKACIJA</Link></li>
-
-            {/* Provjera da li user postoji prije provjere role */}
+            
             {user?.role === "Guest" && (
               <li><Link to="/guest">KORPA</Link></li>
             )}
@@ -59,6 +61,4 @@ const Layout = () => {
   );
 };
 
-
 export default Layout;
-

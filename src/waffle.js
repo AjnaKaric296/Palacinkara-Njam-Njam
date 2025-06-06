@@ -1,4 +1,4 @@
-import React from 'react';
+ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useCart } from './CartContext';
 import { useProducts } from './ProductContext';
@@ -8,7 +8,7 @@ const Waffle = () => {
   const { products } = useProducts();
 
   // Filtriramo samo waffle proizvode po ID-u
-  const waffleProducts = products.filter(p => p.name.toLowerCase().includes('waffle'));
+ const waffleProducts = products.filter(p => p.category === 'waffle');
 const user = JSON.parse(localStorage.getItem('loggedInUser'));
 
   return (
