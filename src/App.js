@@ -14,6 +14,7 @@ import Pica from './pica';
 import Kontakt from "./kontakt";
 import Guest from "./Guest";
 import { CartProvider } from "./CartContext"; 
+import { ProductProvider } from "./ProductContext";
 
 
 
@@ -96,6 +97,7 @@ function RequireAdmin({ children }) {
 
 export default function App() {
   return (
+    <ProductProvider>
     <CartProvider>
     <Router>
       <Routes>
@@ -120,5 +122,6 @@ export default function App() {
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Router></CartProvider>
+    </ProductProvider>
   );
 }

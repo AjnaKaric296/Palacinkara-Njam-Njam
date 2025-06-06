@@ -1,11 +1,15 @@
 /* App.css */
-
-body:not(.register-page,), html:not(.register-page)  {
-  margin: 0;
-  padding: 0;
-  font-family: 'Times New Roman', Times, serif;
-  background-color: white;
-  color: #333;
+.header-home {
+  background-image: url('/public/images/njamnjam1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+  color: white;
+  padding: 150px;
+  height: 400px; 
+  width: auto;
+  margin-top: 10px;
+  margin-bottom: 0px;
 }
 
 .o-nama-wrap {
@@ -41,7 +45,7 @@ body:not(.register-page,), html:not(.register-page)  {
 
 .fixed-logo {
   position: sticky;
-  top: 100px; /* fiksira se dok se tekst skroluje */
+  top: 100px; 
   bottom: 100px;
   width: 350px;
   height: auto;
@@ -84,26 +88,9 @@ body:not(.register-page,), html:not(.register-page)  {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-
-
 .app {
   text-align: center;
 }
-
-
-body:not(.register-page) .header {
-background-image: url('/public/images/njamnjam1.png');
-background-size: contain;
-background-repeat: no-repeat;
-background-position: left;
-color: white;
-padding: 150px;
-height: 335px; 
-  width: 78%;
-  margin-top: 10px;
-  margin-bottom: 0px;
-}
-
 
 .nav {
   position: fixed;            
@@ -142,7 +129,10 @@ height: 335px;
   font-weight: 500;
 }
 
+.pozadina{
+  margin-top: 80px;
 
+}
 .hero h2 {
   font-size: 40px;
   margin: 20px 0 0px;
@@ -311,7 +301,7 @@ height: 335px;
 
 .card button {
   align-self: center;
-  background-color:#fcd34d ; /* žuta */
+  background-color:#fcd34d ;
   border: none;
   padding: 10px 16px;
   border-radius: 8px;
@@ -326,7 +316,6 @@ height: 335px;
   background-color:  #c7990f;
 }
 
-/* Dugme za pregled korpe */
 .naruci-btn-fix {
   position: fixed;
   bottom: 20px;
@@ -346,17 +335,14 @@ height: 335px;
 .naruci-btn-fix:hover {
   background-color: #c7990f;
 }
-
-
-
-
-
-
+.guest-container p {
+  text-align: center;
+}
 
 .naruci-btn-fix {
-  position: fixed;  /* fiksira dugme u viewportu */
-  bottom: 20px;     /* 20px od dna ekrana */
-  right: 20px;      /* 20px od desnog ruba */
+  position: fixed;  
+  bottom: 20px;     
+  right: 20px;      
   padding: 12px 24px;
   font-size: 18px;
   background-color: #F4C542;
@@ -364,17 +350,17 @@ height: 335px;
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  z-index: 1000;   /* da je iznad ostalih elemenata */
+  z-index: 1000;   
 }
 
 .naruci-btn:hover {
   background-color: #e758a3;
 }
 
-
 .footer {
-  position: fixedcc;    
-  width: 97%;                
+ 
+  width:auto; 
+  height: 20px;               
   background-color: rgba(0, 0, 0, 0.7); 
   color: white;
   display: flex;
@@ -400,7 +386,7 @@ height: 335px;
 .guest-container hr {
   margin: 10px 0 20px;
   border: none;
-  border-top: 2px solid #facc15; /* žuta linija */
+  border-top: 2px solid #facc15; 
 }
 
 .cart-list {
@@ -443,7 +429,7 @@ height: 335px;
 
 .cart-card button {
   align-self: flex-end;
-  background-color: #ef4444; /* crvena */
+  background-color: #ef4444; 
   color: white;
   border: none;
   padding: 8px 14px;
@@ -455,6 +441,108 @@ height: 335px;
 
 .cart-card button:hover {
   background-color: #dc2626;
+}
+
+
+.admin-panel {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  color: #333;
+  text-align: center;
+}
+
+.admin-panel h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #F4C542;
+  font-weight: 700;
+}
+
+
+.admin-panel form.mb-4 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.admin-panel form.mb-4 input {
+  flex: 1 1 200px;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.admin-panel form.mb-4 input:focus {
+  outline: none;
+  border-color: #F4C542;
+  box-shadow: 0 0 8px #F4C542aa;
+}
+
+
+.admin-panel form.mb-4 button {
+  flex: 1 1 100px;
+  background-color: #F4C542;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 12px 0;
+}
+
+.admin-panel form.mb-4 button:hover {
+  background-color: #c7990f;
+  color: white;
+}
+
+
+.admin-panel ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+
+.admin-panel ul li {
+  background-color: #fff8e1;
+  border: 1px solid #fcd34d;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  color: #333;
+}
+
+.admin-panel ul li button {
+    background-color: #dc2626;
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.admin-panel ul li button:hover {
+  background-color: #dc262690;
 }
 
 
