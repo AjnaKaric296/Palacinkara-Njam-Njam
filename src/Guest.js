@@ -7,7 +7,7 @@ export default function Guest() {
     <div className="guest-container">
       <h2>Dobrodošli!</h2>
       <hr />
-      <h3>Stavke u korpi:</h3>
+      
       {cart.length === 0 ? (
         <p>Korpa je prazna.</p>
       ) : (

@@ -90,8 +90,7 @@ body:not(.register-page,), html:not(.register-page)  {
   text-align: center;
 }
 
-
-body:not(.register-page) .header {
+body:not(.register-page):not(.poslastice-page):not(.palacinke-page) .header {
 background-image: url('/public/images/njamnjam1.png');
 background-size: contain;
 background-repeat: no-repeat;
@@ -99,7 +98,7 @@ background-position: left;
 color: white;
 padding: 150px;
 height: 335px; 
-  width: 78%;
+  width: 77%;
   margin-top: 10px;
   margin-bottom: 0px;
 }
@@ -346,7 +345,7 @@ height: 335px;
 }
 
 .naruci-btn:hover {
-  background-color: #e758a3;
+  background-color:#c7990f;
 }
 
 
@@ -390,8 +389,8 @@ height: 335px;
 }
 
 .cart-card {
-  background-color: #fff8e1;
-  border: 1px solid #fcd34d;
+  background-color:#facc15;
+  border: 1px solid #333;
   border-radius: 16px;
   padding: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -408,9 +407,10 @@ height: 335px;
 }
 
 .item-name {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   color: #333;
+  position: relative;
 }
 
 .item-price {
@@ -421,7 +421,7 @@ height: 335px;
 
 .cart-card button {
   align-self: flex-end;
-  background-color: #ef4444; /* crvena */
+  background-color: #fcd34d; /* crvena */
   color: white;
   border: none;
   padding: 8px 14px;
@@ -432,7 +432,7 @@ height: 335px;
 }
 
 .cart-card button:hover {
-  background-color: #dc2626;
+  background-color:#c7990f;
 }
 
 
