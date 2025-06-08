@@ -156,40 +156,40 @@ json-server --watch db.json --port 3001
 ## Snimci ekrana radne aplikacije
 
 ### Home Page
-![Home Page](images/homepage.png)
+![Home Page](picture/homepage.png)
 
 ### O nama
-![O nama](images/onama.png)
+![O nama](picture/onama.png)
 
 ### Odabir poslastica
-![Odabir poslastica](images/odabirposlastice.png)
+![Odabir poslastica](picture/odabirposlastice.png)
 
 ### Palačinke
-![Palačinke](images/palacinkice.png)
+![Palačinke](picture/palacinkice.png)
 
 ### Waffli
-![Waffli](images/waffliii.png)
+![Waffli](picture/waffliii.png)
 
 ### Torte
-![Torte](images/torticeee.png)
+![Torte](picture/torticeee.png)
 
 ### Pića
-![Pića](images/picaaa.png)
+![Pića](picture/picaaa.png)
 
 ### Kontakt i lokacija
-![KontLok](images/kontLoka.png)
+![KontLok](picture/kontLoka.png)
 
 ### Prijava
-![Prijava](images/prijava.png)
+![Prijava](picture/prijava.png)
 
 ### Registracija
-![Registracija](images/registracija.png)
+![Registracija](picture/registracija.png)
 
 ### (Guest) Ponude
-![Guest Ponude](images/guest-poslastice.png)
+![Guest Ponude](picture/guest-poslastice.png)
 
 ### (Guest) Korpa
-![Guest Korpa](images/guest-korpa.png)
+![Guest Korpa](picture/guest-korpa.png)
 
 ### Admin panel
 ![Admin panel](images/adminPanel
