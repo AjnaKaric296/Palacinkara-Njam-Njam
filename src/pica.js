@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useCart } from './CartContext';
 import { useProducts } from './ProductContext';
@@ -8,6 +8,19 @@ const Pica = () => {
   const { products } = useProducts();
 
   const picaProducts = products.filter(p => p.category === 'pica');
+const [addedProductId, setAddedProductId] = useState(null);
+
+const handleAddToCart = (card) => {
+  addToCart({
+    id: card.id,
+    naziv: card.name,
+    cijena: parseFloat(card.cijena),
+  });
+  setAddedProductId(card.id);
+
+  // Ako želiš da se poruka 'Dodano u korpu' vrati nazad na 'Dodaj u korpu' nakon par sekundi:
+  setTimeout(() => setAddedProductId(null), 2000); // 2 sekunde
+};
 
   return (
     <div className="container">
@@ -19,23 +32,20 @@ const Pica = () => {
             <div className="card-title">{card.name}</div>
             <div className="card-description">{card.opis}</div>
             <div className="card-price">{card.cijena} KM</div>
+            
               {user?.role === 'Guest' && (
-                        <button
-                          className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-1 px-3 mt-2 rounded"
-                          onClick={() =>
-                            addToCart({
-                              id: card.id,
-                              naziv: card.name,
-                              cijena: parseFloat(card.cijena),
-                            })
-                          }
-                        >
-                          Dodaj u korpu
-                        </button>
-                      )}
+  <button
+    className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-1 px-3 mt-2 rounded"
+    onClick={() => handleAddToCart(card)}
+  >
+    {addedProductId === card.id ? 'Dodano u korpu' : 'Dodaj u korpu'}
+  </button>
+)}
+
                     </div>
                   ))}
                 </div>
+                
             
                 {user?.role === 'Guest' && (
                   <Link to="/Guest">

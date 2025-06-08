@@ -290,7 +290,7 @@ section {
 
 .card-image {
   width: 100%;
-  height: 150px;
+  height: 220px;
   object-fit: cover;
 }
 
@@ -473,6 +473,19 @@ section {
 .cart-card button:hover {
   background-color:#c7990f;
 }
+.total-price {
+  margin-top: 20px;
+  padding: 15px;
+  border-top: 2px solid #f0c040;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  text-align: right;
+  background-color: #fffbea;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 
 
 .admin-panel {
@@ -490,7 +503,7 @@ section {
 .admin-panel h2 {
   font-size: 2rem;
   margin-bottom: 30px;
-  color: #F4C542;
+  color:#fcd34d;
   font-weight: 700;
 }
 
@@ -500,8 +513,48 @@ section {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  
   margin-bottom: 40px;
 }
+/* Suslov: tvoj <select name="category"> već ima option-e sa value="palacinke", "waffle", itd. */
+
+/* Opšti stil i dropdown polje */
+select[name="category"] {
+  padding: 10px 10px;
+  font-size: 1rem;
+  background-color: #fff;
+   margin-bottom: 20px;
+  margin-left: 5px;
+  font-size: 1rem;
+ border: 2px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+.admin-panel select:focus {
+  outline: none;
+  border-color: #F4C542;
+  box-shadow: 0 0 8px #F4C542aa;
+}
+/* 1. Standardno stanje (bez fokusa) */
+select[name="category"] {
+  background-color: white;
+  color: ddd;
+  border: 1px solid #aaa;
+  transition: background-color 0.2s ease;
+}
+
+/* 2. Kad je fokus na select elementu */
+select[name="category"]:focus {
+  background-color: white; /* žućkasta – prilagodi po želji */
+  outline: none; /* sklanja default okvir */
+  border-color: #c7990f;
+}
+
+/* 3. Ako želiš da pri fokusu bude naglašen i tekst */
+select[name="category"]:focus {
+  color: #333;
+}
+
 
 .admin-panel form.mb-4 input {
   flex: 1 1 500px;
@@ -532,7 +585,7 @@ section {
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  padding: 20px 0;
+  padding: 20px 20px;
   margin-left: 20px;
   
 }

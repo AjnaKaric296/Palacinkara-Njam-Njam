@@ -168,7 +168,7 @@ const initialProducts = [
 {
   id: 200,
   name: 'Njam njam torta - 6 palačinaka',
-  img: '/images/torte.jpg',
+  img: '/images/tortaa1.jpg',
   opis: 'Torta od 6 palačinaka, krem, voće', // Dodano polje opis radi konzistentnosti
   cijena: 45,
    category: 'torta'
@@ -176,7 +176,7 @@ const initialProducts = [
 {
   id: 201,
   name: 'Njam njam torta - 8 palačinaka',
-  img: '/images/torte.jpg',
+  img: '/images/tortaa1.jpg',
   opis: 'Krem, jagoda, biskvit',
   cijena: 55,
    category: 'torta'
