@@ -30,11 +30,12 @@ body {
   align-items: flex-start;
   gap: 60px;
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 10px 10px;
+  margin: 20 auto;
+  padding: 50px 20px;
   background-color: white;
   margin-left: 100px;
   margin-bottom: 20px;
+  
 }
 
 .o-nama {
@@ -48,6 +49,7 @@ body {
   margin-bottom: 0px;
   color: #F4C542;
   gap: 20px;
+
 }
 
 .o-nama p {
@@ -265,7 +267,7 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 .card {
@@ -474,7 +476,7 @@ section {
 
 
 .admin-panel {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 40px auto;
   padding: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -494,7 +496,7 @@ section {
 
 
 .admin-panel form.mb-4 {
-  display: flex;
+ grid-template-columns: repeat(auto-fit, minmax(900px, 1fr));
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
@@ -502,12 +504,15 @@ section {
 }
 
 .admin-panel form.mb-4 input {
-  flex: 1 1 200px;
-  padding: 12px 15px;
+  flex: 1 1 500px;
+  padding: 20px 15px;
+  margin-bottom: 20px;
+  margin-left: 5px;
   font-size: 1rem;
   border: 2px solid #ddd;
   border-radius: 8px;
   transition: border-color 0.3s ease;
+  
 }
 
 .admin-panel form.mb-4 input:focus {
@@ -518,16 +523,18 @@ section {
 
 
 .admin-panel form.mb-4 button {
-  flex: 1 1 100px;
+  flex: 5 5 500px;
   background-color: #F4C542;
   color: #333;
   border: none;
   border-radius: 8px;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  padding: 12px 0;
+  padding: 20px 0;
+  margin-left: 20px;
+  
 }
 
 .admin-panel form.mb-4 button:hover {
@@ -541,7 +548,7 @@ section {
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 20px;
 }
 

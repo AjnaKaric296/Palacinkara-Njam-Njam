@@ -35,7 +35,7 @@ const Palacinke = () => {
             <div key={card.id} className="card">
               <img src={card.img} alt={card.name} className="card-image" />
               <div className="card-title">{card.name}</div>
-              <div className="card-description">{card.opis}</div>
+              <div className="card-description">{card.opis} <h1>Slatki palacinci</h1></div>
               <div className="card-price">{card.cijena} KM</div>
 
               {user?.role === 'Guest' && (
