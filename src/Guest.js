@@ -3,11 +3,13 @@ import { useCart } from "./CartContext";
 export default function Guest() {
   const { cart, removeFromCart } = useCart();
 
+  // Izračunavanje ukupne cijene
+  const totalPrice = cart.reduce((sum, item) => sum + parseFloat(item.cijena), 0);
+
   return (
     <div className="guest-container">
-      <h2>Dobrodošli!</h2>
       <hr />
-      
+      <h3>Stavke u korpi:</h3>
       {cart.length === 0 ? (
         <p>Korpa je prazna.</p>
       ) : (

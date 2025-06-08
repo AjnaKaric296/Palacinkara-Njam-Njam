@@ -8,10 +8,8 @@ const Torte = () => {
   const { products } = useProducts();
   
 
-  // Pronađi samo torte po imenu
-  const torteProducts = products.filter(p =>
-    p.name.toLowerCase().includes('torta')
-  );
+
+ const torteProducts = products.filter(p => p.category === 'torta');
 
   return (
     <div className="container">
