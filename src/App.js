@@ -110,7 +110,6 @@ export default function App() {
           <Route path="/pica" element={<Pica />} /> 
           <Route path="login" element={<Login />} />
           <Route path="guest" element={<Guest />} />
-
           <Route path="register" element={<Register />} />
           <Route path="kontakt" element={<Kontakt />} /> 
           <Route path="admin" element={

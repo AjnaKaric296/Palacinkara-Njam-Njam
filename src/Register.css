@@ -77,3 +77,172 @@
   color: #d00;
   text-align: center;
 }
+@media (max-width: 1024px) {
+  .register-container {
+    height: auto;
+    flex-wrap: wrap;
+  }
+  
+  .register-left {
+    flex: 1 1 60%;
+    padding: 40px 20px;
+    background-size: 50%;
+  }
+  
+  .register-right {
+    flex: 1 1 40%;
+    padding: 40px 20px;
+    border-radius: 10px 0 0 10px;
+    box-shadow: -5px 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .register-right button {
+    margin: 40px 10px;
+  }
+}
+
+/* Za ekrane do 768px (tableti i manje) */
+@media (max-width: 768px) {
+  .register-container {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .register-left,
+  .register-right {
+    flex: 1 1 100%;
+    padding: 30px 20px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  
+  .register-left {
+    background-size: 40%;
+    background-position: center top;
+    padding-bottom: 60px;
+  }
+  
+  .register-right {
+    background-color: white;
+    padding-top: 0;
+  }
+  
+  .register-right button {
+    margin: 30px 10px;
+    width: 100%;
+  }
+  
+  .register-right input {
+    margin: 8px 0;
+  }
+}
+
+/* Za ekrane do 480px (mobilni telefoni) */
+@media (max-width: 480px) {
+  .register-left {
+    background-size: 45%;
+    padding: 100px 10px 40px 10px;
+  }
+  
+  .register-right {
+    padding: 20px 15px;
+  }
+  
+  .register-right h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .register-right input {
+    font-size: 0.9rem;
+    padding: 10px 12px;
+    margin: 6px 0;
+  }
+  
+  .register-right button {
+    margin: 20px 0;
+    padding: 12px;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 1920px) {
+ .register-container {
+  display: flex;
+  height: 100vh;
+  margin: 0 auto;
+  box-sizing: border-box;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-left {
+  flex: 1 1 60%;
+  padding: 500px 40px;
+  background: url('/public/images/maskotaa.png') no-repeat center center;
+  background-size: 60%;
+}
+
+.register-right {
+  flex: 1 1 40%;
+  background-color: white;
+  margin-bottom: 120px;
+  padding: 250px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 0 10px 10px 0;
+  box-shadow: -10px 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.register-right h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.register-right form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-right input {
+  font-size: 1rem;
+  padding: 12px 16px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.3s;
+  width: 100%;
+}
+
+.register-right input:focus {
+  border-color: #555;
+}
+
+.register-right button {
+  margin: 40px 0 0;
+  padding: 14px 24px;
+  font-size: 1.1rem;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: auto;
+}
+
+.register-right button:hover {
+  background-color: #333;
+}
+
+.register-right p {
+  margin-top: 15px;
+  color: #d00;
+  text-align: center;
+}
+
+}

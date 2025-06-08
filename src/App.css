@@ -13,7 +13,7 @@ body {
   background-image: url('/public/images/njamnjam1.png');
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: left top; 
+  background-position: left top;
   background-attachment: fixed; 
   color: white;
   padding: 150px;
@@ -122,12 +122,11 @@ body {
   backdrop-filter: blur(10px); 
 }
 
-/* SVE sekcije dobijaju padding-top */
 section {
   padding-top: 80px;
 }
 
-/* ALI Home ostaje bez tog pomaka */
+
 #home {
   padding-top: 0;
 }
@@ -383,6 +382,18 @@ section {
   background-color: #c7990f;
 }
 
+
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 93vh; 
+}
+
+.content-wrap {
+  flex: 1; 
+}
+
 .footer {
  
   width:auto; 
@@ -390,6 +401,7 @@ section {
   background-color: rgba(0, 0, 0, 0.7); 
   color: white;
   display: flex;
+  text-align: center;
   justify-content: center;
   align-items: center; 
   padding: 20px 40px;
@@ -487,8 +499,6 @@ section {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-
-
 .admin-panel {
   max-width: 1000px;
   margin: 40px auto;
@@ -508,7 +518,6 @@ section {
   font-weight: 700;
 }
 
-
 .admin-panel form.mb-4 {
  grid-template-columns: repeat(auto-fit, minmax(900px, 1fr));
   flex-wrap: wrap;
@@ -517,9 +526,7 @@ section {
   
   margin-bottom: 40px;
 }
-/* Suslov: tvoj <select name="category"> već ima option-e sa value="palacinke", "waffle", itd. */
 
-/* Opšti stil i dropdown polje */
 select[name="category"] {
   padding: 10px 10px;
   font-size: 1rem;
@@ -536,7 +543,7 @@ select[name="category"] {
   border-color: #F4C542;
   box-shadow: 0 0 8px #F4C542aa;
 }
-/* 1. Standardno stanje (bez fokusa) */
+
 select[name="category"] {
   background-color: white;
   color: ddd;
@@ -544,14 +551,13 @@ select[name="category"] {
   transition: background-color 0.2s ease;
 }
 
-/* 2. Kad je fokus na select elementu */
+
 select[name="category"]:focus {
-  background-color: white; /* žućkasta – prilagodi po želji */
-  outline: none; /* sklanja default okvir */
+  background-color: white; 
+  outline: none; 
   border-color: #c7990f;
 }
 
-/* 3. Ako želiš da pri fokusu bude naglašen i tekst */
 select[name="category"]:focus {
   color: #333;
 }
@@ -735,10 +741,7 @@ select[name="category"]:focus {
   border-radius: 12px;
   margin-top: 20px;
 }
- 
-/* Dodaj ovo u svoj CSS fajl (App.css ili poseban kontakt.css) */
 
-/* Form validation styles */
 .form-group {
   display: flex;
   flex-direction: column;
@@ -791,7 +794,8 @@ select[name="category"]:focus {
 
 
 body {
-  padding-top: 50px; /* prilagodi visini tvoje navigacije */
+  padding-top: 50px; 
+
 }
 
 @media (max-width: 1024px) {
@@ -813,6 +817,49 @@ body {
     width: 250px;
     top: 80px;
   }
+
+  .nav-links {
+    align-items: center;
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links a {
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .pozadina {
+    margin-top: 80px;
+  }
+
+  .hero h2 {
+    font-size: 40px;
+    margin: 20px 0 0;
+    justify-content: center;
+  }
+
+  .hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .button {
+    background-color: #333;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+
+ 
 }
 
 @media (max-width: 768px) {
@@ -849,6 +896,18 @@ body {
   .nav-links {
     flex-direction: column;
     gap: 15px;
+    align-items: center;
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links a {
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
   }
 
   .header-home {
@@ -857,6 +916,83 @@ body {
     background-attachment: scroll;
     height: auto;
   }
+
+  .pozadina {
+    margin-top: 60px;
+  }
+
+  .hero h2 {
+    font-size: 32px;
+    margin: 20px 0 0;
+    justify-content: center;
+  }
+
+  .hero p {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+
+  .button:hover {
+    background-color: #333;
+  }
+}
+@media (max-width: 1920px) {
+  body {
+    max-width: 1920px;
+    margin-top: 100px;
+  }
+
+  .hero h2 {
+    font-size: 48px;
+  }
+
+  .hero p {
+    font-size: 20px;
+  }
+
+  .button {
+    padding: 14px 28px;
+    font-size: 18px;
+  }
+
+  .fixed-logo {
+    width: 300px;
+    top: 60px;
+  }
+
+  .o-nama-wrap {
+    gap: 60px;
+    margin-left: 80px;
+  }
+
+  .dogadjaj img {
+    width: 55%;
+    margin-left: 20px;
+  }
+
+  .nav-links a {
+    font-size: 18px;
+  }
+
+  .pozadina {
+    margin-top: 100px;
+  }
+  .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
 }
 
 @media (max-width: 480px) {
@@ -878,17 +1014,44 @@ body {
     font-size: 24px;
   }
 
+  .nav-links {
+    align-items: center;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+  }
+
   .nav-links a {
     padding: 10px 0;
     font-size: 16px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
   }
 
   .button {
     padding: 10px 20px;
     font-size: 14px;
+    background-color: #333;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+
+  .button:hover {
+    background-color: #333;
   }
 
   .cards {
     grid-template-columns: 1fr;
+  }
+
+  .pozadina {
+    margin-top: 50px;
   }
 }

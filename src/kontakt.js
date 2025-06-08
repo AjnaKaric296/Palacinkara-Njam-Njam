@@ -18,7 +18,6 @@ export default function Kontakt() {
       [name]: value
     }));
     
-    // Obriši error kada korisnik počne tipkati
     if (errors[name]) {
       setErrors(prev => ({
         ...prev,
@@ -30,14 +29,13 @@ export default function Kontakt() {
   const validateForm = () => {
     const newErrors = {};
 
-    // Validacija imena
     if (!form.name.trim()) {
       newErrors.name = 'Ime je obavezno';
     } else if (form.name.trim().length < 2) {
       newErrors.name = 'Ime mora imati najmanje 2 karaktera';
     }
 
-    // Validacija emaila
+
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!form.email.trim()) {
       newErrors.email = 'Email je obavezan';
@@ -45,7 +43,7 @@ export default function Kontakt() {
       newErrors.email = 'Unesite valjan email';
     }
 
-    // Validacija poruke
+  
     if (!form.message.trim()) {
       newErrors.message = 'Poruka je obavezna';
     } else if (form.message.trim().length < 10) {
@@ -68,16 +66,14 @@ export default function Kontakt() {
     setErrors({});
 
     try {
-      // Ovdje ćemo dodati slanje na server u sljedećem koraku
+      
       console.log('Forma podaci:', form);
       
-      // Simulacija slanja (ukloniti u sljedećem koraku)
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       setSubmitMessage('Poruka je uspješno poslana!');
       setForm({ name: '', email: '', message: '' });
       
-      // Obriši success poruku nakon 5 sekundi
       setTimeout(() => setSubmitMessage(''), 5000);
       
     } catch (error) {
@@ -107,7 +103,7 @@ export default function Kontakt() {
           </div>
         </div>
 
-        <div className="kontakt-card">
+        <div id="kontakt-forma"  className="kontakt-card">
           <h2>Kontaktirajte nas</h2>
           <form onSubmit={handleSubmit}>
             <div className="form-group">

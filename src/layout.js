@@ -7,20 +7,19 @@ const Layout = () => {
   const user = JSON.parse(localStorage.getItem("loggedInUser"));
   const location = useLocation();
 
-  // Provjeri da li smo na home page-u (ruta: "/")
   const isHomePage = location.pathname === "/";
 
   return (
-    <>
+    <div className="page-container"> {/* Ovdje je omotač */}
       <header className={`header ${isHomePage ? "header-home" : ""}`}>
         <nav className="nav">
           <ul className="nav-links">
             <li><HashLink smooth to="/#">HOME PAGE</HashLink></li>
             <li><HashLink smooth to="/#o-nama">O NAMA</HashLink></li>
             <li><Link to="/poslastice">POSLASTICE</Link></li>
-            <li><Link to="/kontakt">KONTAKT</Link></li>
+            <li><Link to="/kontakt#kontakt-forma">KONTAKT</Link></li>
+
             <li><Link to="/kontakt">LOKACIJA</Link></li>
-            
             {user?.role === "Guest" && (
               <li><Link to="/guest">KORPA</Link></li>
             )}
@@ -50,14 +49,14 @@ const Layout = () => {
         </nav>
       </header>
 
-      <main>
+      <main className="content-wrap">
         <Outlet />
       </main>
 
       <footer className="footer">
         <p>&copy; 2025 Palačinkara Njam Njam. Sva prava zadržana.</p>
       </footer>
-    </>
+    </div>
   );
 };
 
