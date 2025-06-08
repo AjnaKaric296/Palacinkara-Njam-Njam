@@ -8,8 +8,8 @@ export default function Guest() {
 
   return (
     <div className="guest-container">
-      <hr />
       <h3>Stavke u korpi:</h3>
+      <hr />
       {cart.length === 0 ? (
         <p>Korpa je prazna.</p>
       ) : (

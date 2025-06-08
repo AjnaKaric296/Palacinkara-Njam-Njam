@@ -72,7 +72,7 @@ body {
 
 .dogadjaji h2 {
   font-size: 32px;
-  color: #F4C542;
+  color: #fcd34d;
   margin-bottom: 40px;
 }
 
@@ -83,7 +83,7 @@ body {
 .dogadjaj h3 {
   font-size: 32px;
   margin-bottom: 20px;
-  color:#F4C542;
+  color:#fcd34d;
 }
 
 .dogadjaj img {
@@ -103,21 +103,6 @@ body {
 .app {
   text-align: center;
 }
-
-
-body:not(.register-page) .header {
-background-image: url('/public/images/njamnjam1.png');
-background-size: contain;
-background-repeat: no-repeat;
-background-position: left;
-color: white;
-padding: 150px;
-height: 335px; 
-  width: 78%;
-  margin-top: 10px;
-  margin-bottom: 0px;
-}
-
 
 .nav {
   position: fixed;            
@@ -203,7 +188,7 @@ section {
 .gallery h2, .contact h2 {
   font-size: 32px;
   margin-bottom: 30px;
-  color: #d03f3f;
+  color: #fcd34d;
 }
 
 
@@ -312,7 +297,7 @@ section {
   font-size: 1.2rem;
   font-family: 'Lexend', sans-serif;
   font-weight: bold;
-  color: #F4C542;
+  color:#fcd34d;
 }
 
 .card-description {
@@ -383,7 +368,7 @@ section {
   right: 20px;      
   padding: 12px 24px;
   font-size: 18px;
-  background-color: #F4C542;
+  background-color:#fcd34d;
   color: #333;
   border: none;
   border-radius: 6px;
@@ -392,7 +377,7 @@ section {
 }
 
 .naruci-btn:hover {
-  background-color:#c7990f;
+  background-color: #c7990f;
 }
 
 .footer {
@@ -409,7 +394,10 @@ section {
   backdrop-filter: blur(10px); 
 }
 .guest-container {
-  max-width: 800px;
+  max-width: 700px;
+  border: 20px;
+  border-radius: 20px;
+  box-shadow: 0 30px 29px rgba(0, 0, 0, 0.1);
   margin: auto;
   padding: 20px;
   font-family: 'Segoe UI', sans-serif;
@@ -424,7 +412,7 @@ section {
 .guest-container hr {
   margin: 10px 0 20px;
   border: none;
-  border-top: 2px solid #facc15; 
+  border-top: 2px solid #fcd34d; 
 }
 
 .cart-list {
@@ -436,8 +424,8 @@ section {
 }
 
 .cart-card {
-  background-color:#facc15;
-  border: 1px solid #333;
+  background-image: url('/public/images/poyadinaaa.png');
+
   border-radius: 16px;
   padding: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -446,35 +434,37 @@ section {
   justify-content: space-between;
 }
 
-.cart-card-content {
-  display: flex;
+.cart-card-content {display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 12px;
 }
 
 .item-name {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   color: #333;
-  position: relative;
+  margin-left: 30px;
+  margin-top: 10px;
 }
 
 .item-price {
-  font-size: 20px;
+  font-size: 21px;
   font-weight: bold;
+  margin-right: 30px;
   color: #1f2937;
 }
 
 .cart-card button {
   align-self: flex-end;
-  background-color: #ef4444; /* crvena */
+  background-color: #333; 
   color: white;
   border: none;
   padding: 8px 14px;
   border-radius: 8px;
-  font-size: 14px;
+  font-size: 16px;
   cursor: pointer;
+  margin-right: 20px;
   transition: background-color 0.2s;
 }
 
@@ -570,7 +560,7 @@ section {
 }
 
 .admin-panel ul li button {
-    background-color: #dc2626;
+    background-color:#F4C542;
   border: none;
   color: white;
   padding: 8px 14px;
@@ -581,11 +571,11 @@ section {
 }
 
 .admin-panel ul li button:hover {
-  background-color: #dc262690;
+  background-color:#c7990f;
 }
 
 .lokacija-box {
-  ffont-family: 'Lexend', sans-serif;
+  font-family: 'Lexend', sans-serif;
   background-color: #fff;
   max-width: 700px;
   margin: 40px auto;
@@ -672,7 +662,7 @@ section {
 }
 
 .kontakt-card button:hover {
-  background-color: #555;
+  background-color: #c7990f;
 }
 
 .lokacija-card img {
