@@ -111,21 +111,17 @@ Modularna i organizovana struktura omogućava jednostavno održavanje.
 
 ## Kratki opis doprinosa svakog člana tima
 
-###  Tajra Tašić & Ajna Karić
-- Frontend & Backend funkcionalnosti
-- Registracija, prijava, sistem uloga
-- Prikaz proizvoda, narudžbi, kontakt poruka
-- Validacija unosa, fetch/Axios zahtjevi
+Kratki opis doprinosa svakog člana tima
+Aplikacija je rezultat timske saradnje i zajedničkog dogovora između tri članice: Tajre Tašić,
+Ajne Karić i Aide Begagić. Tokom cijelog procesa, sve ključne odluke o dizajnu,
 
-###  Aida Begagić
-- Dizajn i CSS stilizacija
-- Vizuelni izgled i UI/UX
-- Responzivnost
-
-###  Zajednički doprinos
-- Planiranje, prototipiranje
-- Fleksibilna saradnja i podrška
-- Testiranje i optimizacija
+12
+funkcionalnosti i implementaciji su donošene zajednički. Iako je svaki član tima imao glavnu
+oblast djelovanja, svi su doprinijeli i u drugim dijelovima aplikacije – od CSS-a, preko
+frontend i backend koda, do testiranja i validacije.
+Često su se vršile izmjene i poboljšanja kroz međusobno savjetovanje, a svaka članica je
+radila i manje korekcije u oblastima koje formalno nisu bile njena primarna odgovornost, što
+je dodatno doprinijelo kvaliteti i timskom duhu.
 
 ---
 
@@ -157,21 +153,46 @@ json-server --watch db.json --port 3001
 
 ## Snimci ekrana radne aplikacije
 
-- Home Page
-- O nama
-- Odabir poslastica
-- Palačinke
-- Waffli
-- Torte
-- Pića
-- Prijava
-- Registracija
-- Guest ponude
-- Guest korpa
-- Admin panel
+## Snimci ekrana radne aplikacije
 
----
+### Home Page
+![Home Page](images/homepage.png)
 
+### O nama
+![O nama](images/onama.png)
+
+### Odabir poslastica
+![Odabir poslastica](images/odabirposlastice.png)
+
+### Palačinke
+![Palačinke](images/palacinkice.png)
+
+### Waffli
+![Waffli](images/waffliii.png)
+
+### Torte
+![Torte](images/torticeee.png)
+
+### Pića
+![Pića](images/picaaa.png)
+
+### Kontakt i lokacija
+![KontLok](images/kontLoka.png)
+
+### Prijava
+![Prijava](images/prijava.png)
+
+### Registracija
+![Registracija](images/registracija.png)
+
+### (Guest) Ponude
+![Guest Ponude](images/guest-poslastice.png)
+
+### (Guest) Korpa
+![Guest Korpa](images/guest-korpa.png)
+
+### Admin panel
+![Admin panel](images/adminPanel
 Univerzitet u Zenici  
 Politehnički fakultet  
 Softverski inženjering  
