@@ -111,21 +111,16 @@ Modularna i organizovana struktura omogućava jednostavno održavanje.
 
 ## Kratki opis doprinosa svakog člana tima
 
-###  Tajra Tašić & Ajna Karić
-- Frontend & Backend funkcionalnosti
-- Registracija, prijava, sistem uloga
-- Prikaz proizvoda, narudžbi, kontakt poruka
-- Validacija unosa, fetch/Axios zahtjevi
 
-###  Aida Begagić
-- Dizajn i CSS stilizacija
-- Vizuelni izgled i UI/UX
-- Responzivnost
+Aplikacija je rezultat timske saradnje i zajedničkog dogovora između tri članice: Tajre Tašić,
+Ajne Karić i Aide Begagić. Tokom cijelog procesa, sve ključne odluke o dizajnu,
+funkcionalnosti i implementaciji su donošene zajednički. Iako je svaki član tima imao glavnu
+oblast djelovanja, svi su doprinijeli i u drugim dijelovima aplikacije – od CSS-a, preko
+frontend i backend koda, do testiranja i validacije.
+Često su se vršile izmjene i poboljšanja kroz međusobno savjetovanje, a svaka članica je
+radila i manje korekcije u oblastima koje formalno nisu bile njena primarna odgovornost, što
+je dodatno doprinijelo kvaliteti i timskom duhu.
 
-###  Zajednički doprinos
-- Planiranje, prototipiranje
-- Fleksibilna saradnja i podrška
-- Testiranje i optimizacija
 
 ---
 
