@@ -192,7 +192,7 @@ json-server --watch db.json --port 3001
 ![Guest Korpa](picture/guest-korpa.png)
 
 ### Admin panel
-![Admin panel](images/adminPanel)
+![Admin panel](picture/adminPanel)
 
 Univerzitet u Zenici  
 Politehnički fakultet  
